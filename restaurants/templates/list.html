@@ -7,8 +7,11 @@
 <div class="row">
     {% for restaurant in restaurants %}
     <div class="col-md-4">
+      {% if restaurant.logo %}
+        <img class="card-image-top" src="{{restaurant.logo.url}}" alt="Card image cap">
+        {% endif %}
         <div class="card my-card">
-          <div class="card-body">
+          <div class="card-body">s
             <h5 class="card-title">{{restaurant.name}}</h5>
             <p class="card-text">{{restaurant.description|truncatechars:25}}</p>
           </div>
